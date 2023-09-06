@@ -11,12 +11,11 @@ public class Counter {
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
-            } else {
-                if (!isActive) {
-                    isActive = true;
-                    notifyAll();
-                }
             }
+            if (i == 10 && !isActive) {
+                notifyAll();
+            }
+
             System.out.println(name + " - " + i);
             try {
                 Thread.sleep(500);

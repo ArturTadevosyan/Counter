@@ -5,7 +5,5 @@ public class Main {
         counterThread1.start();
         CounterThread counterThread2 = new CounterThread("T2", counter);
         counterThread2.start();
-        CounterThread counterThread3 = new CounterThread("T3", counter);
-        counterThread3.start();
     }
 }
